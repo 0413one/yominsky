@@ -1,29 +1,17 @@
-window.addEventListener('DOMContentLoaded', (event) => {
-    var images = document.querySelectorAll('img#non');
-    images.forEach(img => {
-        img.src = '1.png'; //无头像时的显示
-    });
-});
+const container = document.getElementById("quotes");
 
-function qiehuan() {
-    document.body.classList.toggle('dark-mode');
-    var sunIcon = document.querySelector('#mode-toggle .sun-icon');
-    var moonIcon = document.querySelector('#mode-toggle .moon-icon');
-    if (document.body.classList.contains('dark-mode')) {
-        sunIcon.style.display = 'none';
-        moonIcon.style.display = 'block';
-    } else {
-        sunIcon.style.display = 'block';
-        moonIcon.style.display = 'none';
-    }
-}
+quotes.forEach(item => {
 
-function checkSystemTheme() {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark-mode');
-    }
-}
+  const div = document.createElement("div");
+  div.className = "quote";
 
-document.addEventListener('DOMContentLoaded', function () {
-    checkSystemTheme();
+  div.innerHTML = `
+    <span class="name">@${item.name}</span>
+    <p>${item.text}</p>
+    <span class="com">${item.time}</span>
+    <span class="com">From ${item.address}</span>
+  `;
+
+  container.appendChild(div);
+
 });
