@@ -1,54 +1,100 @@
-/* 去除边框 */
-table {
-    border-collapse: collapse;
-    border: none;
+#quotes {
+  max-width:700px;
+  margin:auto;
+  padding:48px 7px;
+  
 }
 
-#mode-toggle {
-    position: fixed;
-    background-color: #333;
-    bottom: 20px;
-    right: 20px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    z-index: 999;
+.quote {
+  padding:16px 0;
+  border-bottom:1px solid #eee;
 }
 
-/* 切换按钮图标 */
-#mode-toggle .icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 24px;
-    height: 24px;
+.quote p {
+  margin:0;
+  line-height:1.8;
 }
 
-body.dark-mode {
-    background-color: #333;
-    color: #fff;
+.name{
+  font-weight: bold;
 }
 
-body.dark-mode table {
-    background-color: #333;
-    color: #fff;
+.com{
+  font-size:12px;
+  color:#999;
 }
 
-body.light-mode #mode-toggle {
-    background-color: #333;
+header {
+  position: fixed;
+  background: #ffa398;
+  height: 50px;
+  width: 100vw;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-body.dark-mode #mode-toggle {
-    background-color: #fff;
+header a {
+  text-decoration: none;
 }
 
-body.dark-mode #mode-toggle .sun-icon {
-    display: none;
+.app-title {
+  margin: 8px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
 }
 
-body.light-mode #mode-toggle .moon-icon {
-    display: none;
+footer {
+  position: fixed;
+  text-align: center;
+  background: #ffffff;
+  height: 50px;
+  width: 100vw;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  text-decoration: none;
+  margin: 22px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+}
+
+/*锚点增高*/
+html {
+  scroll-padding-top: 110px;
+}
+
+/*代码块*/
+.block {
+  border-radius: 12px;
+  background-color: #111111;
+  color: #ffa398;
+  font-weight: bold;
+  padding: 18px;
+}
+
+.block a {
+  text-decoration: underline;
+}
+
+a {
+  color: #ffa398;
+}
+
+.title {
+  font-size: 24px;
+  margin: 5px 0px;
+  padding-left: 5px;
+  border-left: 4px solid #ffa398;
+  color: #000000;
 }
